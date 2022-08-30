@@ -1,0 +1,19 @@
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000/document HTTP/1.1
+
+###
+
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "id": "user",
+    "password": "user1"
+}
+
+###
+
+GET  http://localhost:3000/logout HTTP/1.1

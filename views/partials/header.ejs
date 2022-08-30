@@ -1,0 +1,58 @@
+<nav class="row navbar navbar-expand-lg navbar-light bg-white">
+  <a href="/" class="navbar-brand">
+    <img src="/images/pemprov.png" alt="Logo Nomades" />
+  </a>
+  <button
+    class="navbar-toggler navbar-toggler-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navb"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navb">
+    <ul class="navbar-nav ml-auto mr-3">
+      <li class="nav-item mx-md-2">
+        <a href="#" class="nav-link active">Home</a>
+      </li>
+      <li class="nav-item mx-md-2">
+        <a href="https://bit.ly/3pO83lN" class="nav-link" target="_blank"
+          >Regulasi</a
+        >
+      </li>
+      <li class="nav-item mx-md-2">
+        <a href="https://bit.ly/3pRb1WG" class="nav-link" target="_blank"
+          >Kontak</a
+        >
+      </li>
+      <li class="nav-item mx-md-2">
+        <a href="https://bit.ly/3Rh57tO" class="nav-link" target="_blank"
+          >LPSE</a
+        >
+      </li>
+    </ul>
+
+    <!-- Mobile Button -->
+    <form class="form-inline d-sm-block d-md-none">
+      <button class="btn btn-login my-2 my-sm-0">
+        <% if(email){ %>
+        <a href="/logout"> Keluar </a>
+        <% } else{ %>
+        <a href="/login"> Masuk </a>
+        <% } %>
+      </button>
+    </form>
+
+    <!-- Dekstop Button -->
+    <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+      <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+        <% if(email){ %>
+        <a href="/logout"> Keluar </a>
+        <% } else{ %>
+        <a href="/login"> Masuk </a>
+        <% } %>
+      </button>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,113 @@
+body {
+    background-color: #E4e6eb;
+    font-family: 'Assistant', sans-serif;
+    color: #071c4d;
+}
+
+// navbar
+
+.navbar-brand  {
+    img {
+        max-height: 40px;
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            color: #071c4d;
+
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.btn-navbar-right {
+    margin-top: -10px !important;
+    margin-bottom: -8px !important;
+    margin-right: -18px !important;
+
+    height: 70px;
+    border-radius: 0;
+}
+
+.btn-login {
+    background-color: #071c4d;
+    color: #fff;
+
+    &:hover {
+        background-color: #133771;
+        color: #fff;
+    }
+}
+
+// header
+header {
+    padding: 180px 0 165px;
+    margin-top: -70px;
+    background-image: url('../images/header1.jpg');
+    background-size: cover;
+ 
+    h1, p {
+        color: #000;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+// statistic
+// .section-stats {
+//     margin-top: -50px;
+
+//     .stats-detail {
+//         padding-top: 15px;
+//     }
+// }
+
+// popular
+// .section-popular {
+//     min-height: 120%;
+//     background-color: aliceblue;
+//     margin-top: -50px;
+//     margin-bottom: -230px;
+
+//     .section-popular-heading {
+//         margin-top: 150px;
+
+//         h2 {
+//             color:#fff;
+//             font-family: Arial, Helvetica, sans-serif;
+//             font-weight: bold;
+//         }
+
+//     }
+
+// }
+
+// footer
+.section-footer {
+    a {
+        color:#071c4d;
+    }
+
+
+}
+.list-unstyled  img {
+    max-height: 40px;
+    max-width: 40px;
+}
+
+// login page
+.form-login {
+    margin-top: 25%;
+}
