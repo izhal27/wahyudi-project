@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container"><%- include('../partials/header'); %>
+
+    <!-- form login -->
+    <form class="form-login mt-4" method="POST" onsubmit="return signup(event)">
+      <div class="container w-50">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            aria-describedby="usernameHelp"
+            placeholder="Enter username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            required
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <footer class="section-footer mt-5 mb-4 border-top">
+      <%- include('../partials/footer'); %>
+    </footer>
+  </body>
+  <script>
+    const infoPopup = ({ title, info, icon, redirect }) =>
+      Swal.fire(title, info, icon).then(function () {
+        if (redirect) {
+          window.location = redirect;
+        }
+      });
+
+    const signup = (e) => {
+      const username = document.querySelector("#username").value;
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+
+      e.preventDefault();
+
+      axios
+        .post("/signup", {
+          username,
+          email,
+          password,
+        })
+        .then(function (response) {
+          infoPopup({
+            title: "Success",
+            info: response.data.message,
+            icon: "success",
+            redirect: "/",
+          });
+        })
+        .catch(function (error) {
+          infoPopup({
+            title: "Error",
+            info: error.response.data.message,
+            icon: "error",
+          });
+        });
+    };
+  </script>
+</html>

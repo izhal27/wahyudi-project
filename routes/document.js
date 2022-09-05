@@ -1,10 +1,18 @@
 const express = require("express");
 const router = express.Router();
 
-module.exports = router.get("/", (req, res) => {
-  res.send("get document");
-});
+const documentController = require("../controllers/document");
 
-module.exports = router.post("/", (req, res) => {
-  res.send("success upload document");
-});
+router.get("/", documentController.index);
+
+router.get("/data", documentController.data);
+
+router.get("/new", documentController.createGet);
+
+router.post("/new", documentController.createPost);
+
+router.get("/delete/:id", documentController.deleteGet);
+
+router.post("/delete", documentController.delete);
+
+module.exports = router;

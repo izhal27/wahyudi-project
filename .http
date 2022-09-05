@@ -1,10 +1,21 @@
 GET http://localhost:3000/ HTTP/1.1
 
-###
+### GET document
 
-GET http://localhost:3000/document HTTP/1.1
+GET http://localhost:3000/document/data HTTP/1.1
 
-###
+### POST signup
+
+POST http://localhost:3000/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user",
+    "email": "user@user.com",
+    "password": "user"
+}
+
+### POST login
 
 POST http://localhost:3000/login HTTP/1.1
 content-type: application/json
@@ -14,6 +25,19 @@ content-type: application/json
     "password": "user1"
 }
 
-###
+### GET logout
 
 GET  http://localhost:3000/logout HTTP/1.1
+
+
+### POST signup
+
+POST http://localhost:3000/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user",
+    "email": "user@user.com",
+    "password": "user"
+}
+

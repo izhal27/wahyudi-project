@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navb">
     <ul class="navbar-nav ml-auto mr-3">
       <li class="nav-item mx-md-2">
-        <a href="#" class="nav-link active">Home</a>
+        <a href="/" class="nav-link active">Home</a>
       </li>
       <li class="nav-item mx-md-2">
         <a href="https://bit.ly/3pO83lN" class="nav-link" target="_blank"
@@ -31,14 +31,18 @@
           >LPSE</a
         >
       </li>
+
+      <li class="nav-item mx-md-2">
+        <a href="/document" class="nav-link">Documents</a>
+      </li>
     </ul>
 
     <!-- Mobile Button -->
     <form class="form-inline d-sm-block d-md-none">
       <button class="btn btn-login my-2 my-sm-0">
-        <% if(email){ %>
+        <% if(user){ %>
         <a href="/logout"> Keluar </a>
-        <% } else{ %>
+        <% } else { %>
         <a href="/login"> Masuk </a>
         <% } %>
       </button>
@@ -47,9 +51,9 @@
     <!-- Dekstop Button -->
     <form class="form-inline my-2 my-lg-0 d-none d-md-block">
       <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
-        <% if(email){ %>
+        <% if(user){ %>
         <a href="/logout"> Keluar </a>
-        <% } else{ %>
+        <% } else { %>
         <a href="/login"> Masuk </a>
         <% } %>
       </button>

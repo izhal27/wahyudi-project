@@ -1,6 +1,5 @@
 module.exports = (req, res, next) => {
-  console.log(req.session.email);
-  if (req.session.email) {
+  if (req.session.user) {
     next();
   } else {
     res.redirect("/login");
